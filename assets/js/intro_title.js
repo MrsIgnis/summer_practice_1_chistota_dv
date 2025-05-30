@@ -1,98 +1,86 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const wordElement = document.querySelector('.typing-word');
-    if (!wordElement) return;
+window.typingAnimation = {
+    words: ['ЧИСТОТА', 'КОМФОРТ', 'КАЧЕСТВО'],
+    currentWordIndex: 0,
+    timeoutIds: [],
+    isRunning: false,
+    typingElement: null,
+    direction: 'forward',
+    elementId: '',
 
-    const words = ['ЧИСТОТА', 'КОМФОРТ', 'УЮТ', 'КАЧЕСТВО'];
-    let wordIndex = 0;
+    init: function (elementId) {
+        this.stop();
 
-    const cursor = document.createElement('div');
-    cursor.className = 'typing-cursor';
-    wordElement.innerHTML = '';
-    wordElement.appendChild(cursor);
+        this.elementId = elementId;
+        this.typingElement = document.getElementById(elementId);
 
-    const config = {
-        letterDelay: 35,
-        showDuration: 180,
-        hideDuration: 150,
-        pauseBeforeDelete: 600,
-        cursorMoveDuration: 100
-    };
+        if (!this.typingElement) {
+            console.error('Element not found:', elementId);
+            return;
+        }
 
-    function createLetterSpan(char) {
-        const span = document.createElement('span');
-        span.className = 'typing-letter';
-        span.textContent = char;
-        span.style.opacity = 0;
-        return span;
-    }
+        this.start();
+    },
 
-    async function typeLetters(word) {
-        for (let i = 0; i < word.length; i++) {
-            const letter = createLetterSpan(word[i]);
-            wordElement.insertBefore(letter, cursor);
+    start: function () {
+        if (this.isRunning) return;
 
-            await anime({
-                targets: cursor,
-                left: letter.offsetLeft + letter.offsetWidth,
-                duration: config.cursorMoveDuration,
-                easing: 'easeInOutQuad'
-            }).finished;
+        this.isRunning = true;
+        this.currentWordIndex = 0;
+        this.direction = 'forward';
+        this.typingElement.innerHTML = '';
+        this._animate();
+    },
 
-            await anime({
-                targets: letter,
-                opacity: [0, 1],
-                translateY: ['0.3em', '0em'],
-                duration: config.showDuration,
-                easing: 'easeOutExpo'
-            }).finished;
+    stop: function () {
+        this.isRunning = false;
+        this.timeoutIds.forEach(clearTimeout);
+        this.timeoutIds = [];
+    },
 
-            await new Promise(resolve => setTimeout(resolve, config.letterDelay));
+    _animate: function () {
+        if (!this.isRunning || !this.typingElement) return;
+
+        const word = this.words[this.currentWordIndex];
+        let currentText = this.typingElement.innerHTML;
+        const wordLength = word.length;
+        const currentLength = currentText.length;
+
+        if (this.direction === 'forward') {
+            if (currentLength < wordLength) {
+                this.typingElement.innerHTML = word.substring(0, currentLength + 1);
+                this.timeoutIds.push(
+                    setTimeout(() => this._animate(), 100 + Math.random() * 100)
+                );
+            } else {
+                this.direction = 'backward';
+                this.timeoutIds.push(
+                    setTimeout(() => this._animate(), 1000)
+                );
+            }
+        } else {
+            if (currentLength > 0) {
+                this.typingElement.innerHTML = word.substring(0, currentLength - 1);
+                this.timeoutIds.push(
+                    setTimeout(() => this._animate(), 50 + Math.random() * 50)
+                );
+            } else {
+                this.direction = 'forward';
+                this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
+                this.timeoutIds.push(
+                    setTimeout(() => this._animate(), 500)
+                );
+            }
         }
     }
+};
 
-    async function deleteLetters() {
-        const letters = wordElement.querySelectorAll('.typing-letter');
-        for (let i = letters.length - 1; i >= 0; i--) {
-            const letter = letters[i];
-
-            await anime({
-                targets: cursor,
-                left: letter.offsetLeft,
-                duration: config.cursorMoveDuration,
-                easing: 'easeInOutQuad'
-            }).finished;
-
-            await anime({
-                targets: letter,
-                opacity: [1, 0],
-                translateY: ['0em', '-0.3em'],
-                duration: config.hideDuration,
-                easing: 'easeInExpo'
-            }).finished;
-
-            letter.remove();
-
-            await new Promise(resolve => setTimeout(resolve, config.letterDelay / 1.5));
-        }
+function initTypingAnimation() {
+    if (window.innerWidth > 768) {
+        window.typingAnimation.init('typing-word');
+    } else {
+        window.typingAnimation.init('typing-word-mobile');
     }
+}
 
-    async function animationCycle() {
-        const currentWord = words[wordIndex % words.length];
-        wordIndex++;
-
-        await typeLetters(currentWord);
-        await new Promise(resolve => setTimeout(resolve, config.pauseBeforeDelete));
-        await deleteLetters();
-
-        await anime({
-            targets: cursor,
-            left: 0,
-            duration: 200,
-            easing: 'easeOutQuad'
-        }).finished;
-
-        setTimeout(animationCycle, 500);
-    }
-
-    animationCycle();
-});
+document.addEventListener('DOMContentLoaded', initTypingAnimation);
+window.addEventListener('resize', initTypingAnimation);

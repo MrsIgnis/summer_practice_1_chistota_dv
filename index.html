@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/assets/css/styles.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>Чистота ДВ</title>
 </head>
 
@@ -43,157 +42,286 @@
         </div>
     </header>
 
-    <section id="intro" class="container_max">
+    <section id="intro" class="container_max intro_fullwidth">
         <div class="intro_inner">
 
-            <div class="intro_text_block">
-                <div class="intro_promo">
-                    <div class="intro_text">
-                        <h3 class="intro_title">С НАМИ <br> У ВАС ВСЕГДА
-                            <span class="typing-word">ЧИСТОТА</span>
-                        </h3>
-                        <p class="intro_subtitle">Профессиональный клининг для дома и офиса с <br> гарантией качества.
-                        </p>
+            <div class="intro_promo desktop_promo">
+                <div class="intro_text">
+                    <h3 class="intro_title">С НАМИ <br> У ВАС ВСЕГДА <br>
+                        <span id="typing-word" class="typing-word"></span>
+                    </h3>
+                    <p class="intro_subtitle">Профессиональный клининг для дома и офиса с <br> гарантией качества.
+                    </p>
+                </div>
+
+                <div class="reviews_wrapper">
+                    <a href="#" class="custom_tooltip">
+                        <div class="advantage_reviews_item">
+                            <div class="icon_rev"><img src="/assets/images/intro/vl.svg" alt=""></div>
+                            <div class="mark">
+                                <p>4.9</p>
+                                <img src="/assets/images/intro/star.svg" alt="">
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="custom_tooltip yandex-block">
+                        <div class="advantage_reviews_item">
+                            <div class="icon_rev"><img src="/assets/images/intro/yandex.svg" alt=""></div>
+                            <div class="mark">
+                                <p>4.9</p>
+                                <img src="/assets/images/intro/star.svg" alt="">
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="custom_tooltip">
+                        <div class="advantage_reviews_item">
+                            <div class="icon_rev"><img src="/assets/images/intro/2gis.svg" alt=""></div>
+                            <div class="mark">
+                                <p>4.9</p>
+                                <img src="/assets/images/intro/star.svg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="intro_buttons">
+                    <button class="order_clean_btn btn_txt btn_form">Заказать уборку</button>
+                    <button class="arrow_btn btn_form"><img src="/assets/images/intro/arrow.svg" alt=""></button>
+                </div>
+            </div>
+
+            <div class="mobile_slider_wrapper">
+                <div class="swiper-container mobile-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide mobile-slide mobile-slide-with-video">
+                            <div class="mobile_promo_slide">
+                                <div class="intro_text">
+                                    <h3 class="intro_title">С НАМИ У ВАС <br> ВСЕГДА <br>
+                                        <span id="typing-word-mobile" class="typing-word"></span>
+                                    </h3>
+                                    <p class="intro_subtitle">Профессиональный клининг для дома <br> и офиса с гарантией
+                                        качества.
+                                    </p>
+                                </div>
+
+                                <div class="reviews_wrapper">
+                                    <a href="#" class="custom_tooltip">
+                                        <div class="advantage_reviews_item">
+                                            <div class="icon_rev"><img src="/assets/images/intro/vl.svg" alt=""></div>
+                                            <div class="mark">
+                                                <p>4.9</p>
+                                                <img src="/assets/images/intro/star.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="custom_tooltip yandex-block">
+                                        <div class="advantage_reviews_item">
+                                            <div class="icon_rev"><img src="/assets/images/intro/yandex.svg" alt="">
+                                            </div>
+                                            <div class="mark">
+                                                <p>4.9</p>
+                                                <img src="/assets/images/intro/star.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="custom_tooltip">
+                                        <div class="advantage_reviews_item">
+                                            <div class="icon_rev"><img src="/assets/images/intro/2gis.svg" alt=""></div>
+                                            <div class="mark">
+                                                <p>4.9</p>
+                                                <img src="/assets/images/intro/star.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide mobile-slide">
+                            <div class="mobile_advantages_slide">
+                                <div class="intro_advantages">
+                                    <div class="intro_advantages_item">
+                                        <div class="intro_advantages_item_1">Успех гарантирован</div>
+                                        <div class="intro_advantages_item_2">
+                                            <p class="numb_advnt"><span>+50</span> чел</p>
+                                            <p class="adv_subtitle">в команде</p>
+                                        </div>
+                                    </div>
+                                    <div class="intro_advantages_item">
+                                        <div class="intro_advantages_item_1">Работаем с 2019 г</div>
+                                        <div class="intro_advantages_item_2">
+                                            <p class="numb_advnt"><span>+5</span> лет</p>
+                                            <p class="adv_subtitle">В этой сфере</p>
+                                        </div>
+                                    </div>
+                                    <div class="intro_advantages_item">
+                                        <div class="intro_advantages_item_1">В надежных руках</div>
+                                        <div class="intro_advantages_item_2">
+                                            <p><span class="numb_advnt"><span>+20К</span> м2</p>
+                                            <p>Вычищаем/мес</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="reviews_wrapper">
-                        <a href="#" class="custom_tooltip">
-                            <div class="advantage_reviews_item">
-                                <div class="icon_rev"><img src="/assets/images/intro/vl.svg" alt=""></div>
-                                <div class="mark">
-                                    <p>4.9</p>
-                                    <img src="/assets/images/intro/star.svg" alt="">
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="custom_tooltip yandex-block">
-                            <div class="advantage_reviews_item">
-                                <div class="icon_rev"><img src="/assets/images/intro/yandex.svg" alt=""></div>
-                                <div class="mark">
-                                    <p>4.9</p>
-                                    <img src="/assets/images/intro/star.svg" alt="">
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="custom_tooltip">
-                            <div class="advantage_reviews_item">
-                                <div class="icon_rev"><img src="/assets/images/intro/2gis.svg" alt=""></div>
-                                <div class="mark">
-                                    <p>4.9</p>
-                                    <img src="/assets/images/intro/star.svg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="intro_buttons">
+                    <div class="mobile_buttons_container">
                         <button class="order_clean_btn btn_txt btn_form">Заказать уборку</button>
                         <button class="arrow_btn btn_form"><img src="/assets/images/intro/arrow.svg" alt=""></button>
                     </div>
+
+                    <div class="swiper-pagination mobile-pagination"></div>
                 </div>
             </div>
 
+            <div class="mobile_video_background">
+                <video class="mobile_background_video active" src="/assets/images/intro/video_intro/intro_video_1.mp4"
+                    muted loop playsinline></video>
+                <video class="mobile_background_video" src="/assets/images/intro/video_intro/intro_video_2.mp4" muted
+                    loop playsinline></video>
+                <video class="mobile_background_video" src="/assets/images/intro/video_intro/intro_video_3.mp4" muted
+                    loop playsinline></video>
+                <video class="mobile_background_video" src="/assets/images/intro/video_intro/intro_video_4.mp4" muted
+                    loop playsinline></video>
+            </div>
 
-            <div class="intro_slider_wrapper">
-                <div class="swiper swiper-one">
+            <div class="intro_slider_wrapper desktop_slider">
+                <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide slide">
                             <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
-                                autoplay muted loop></video>
+                                playsinline></video>
                         </div>
-                    </div>
-                </div>
-
-
-                <div class="swiper-two-wrapper">
-                    <div class="swiper swiper-two">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
-                                    muted loop></video>
-                            </div>
-                            <div class="swiper-slide">
-                                <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
-                                    muted loop></video>
-                            </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_3.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_4.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_5.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_1.mp4"
+                                playsinline></video>
+                        </div>
+                        <div class="swiper-slide slide">
+                            <video class="slider_video" src="/assets/images/intro/video_intro/intro_video_2.mp4"
+                                playsinline></video>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
-            <div class="intro_advantages">
+            <div class="intro_advantages desktop_advantages">
                 <div class="intro_advantages_item">
                     <div class="intro_advantages_item_1">Успех гарантирован</div>
                     <div class="intro_advantages_item_2">
@@ -203,7 +331,7 @@
                 </div>
                 <div class="intro_advantages_item">
                     <div class="intro_advantages_item_1">Работаем с 2019 г</div>
-                    <div class="intro_advantages_item_3">
+                    <div class="intro_advantages_item_2">
                         <p class="numb_advnt"><span>+5</span> лет</p>
                         <p>В этой сфере</p>
                     </div>
@@ -211,16 +339,20 @@
                 <div class="intro_advantages_item">
                     <div class="intro_advantages_item_1">В надежных руках</div>
                     <div class="intro_advantages_item_2">
-                        <p><span class="numb_advnt_2">+20К</span> м2</p>
+                        <p><span class="numb_advnt"><span>+20К</span> м2</p>
                         <p>Вычищаем/мес</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/assets/js/intro_title.js"></script>
     <script src="/assets/js/slider_intro.js"></script>
 </body>
